@@ -13,12 +13,12 @@
 .flex-c {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .flex-between {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -28,6 +28,10 @@
 
 .p-20 {
   padding: 20px;
+}
+
+.p-15 {
+  padding: 15px;
 }
 
 .m-20 {
@@ -40,6 +44,10 @@
 
 .w-full {
   width: 100%;
+}
+
+.grey-border {
+  border: 1px solid #ccc;
 }
 
 .rad-10 {
