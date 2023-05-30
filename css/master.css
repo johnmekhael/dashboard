@@ -10,7 +10,7 @@
   --main-blue: #0075ff;
   --secondary-blue: #0d69d5;
   --main-orange: #f59e0b;
-  --main-green:#22c55e;
+  --main-green: #22c55e;
   --main-red: #f44336;
   --main-grey: #888;
 }
@@ -335,12 +335,12 @@ ul {
 
 .orange .icon,
 .orange .progress {
-  background-color:rgba(245, 159, 11, 0.25);
+  background-color: rgba(245, 159, 11, 0.25);
 }
 
 .green .icon,
 .green .progress {
-  background-color:rgba(34, 197, 94, 0.25);
+  background-color: rgba(34, 197, 94, 0.25);
 }
 
 
@@ -392,9 +392,22 @@ ul {
 .targets .progress>.blue span::after {
   border-top-color: var(--main-blue);
 }
+
 .targets .progress>.orange span::after {
   border-top-color: var(--main-orange);
 }
+
 .targets .progress>.green span::after {
   border-top-color: var(--main-green);
+}
+
+.tickets .box {
+  border: 1px solid #ccc;
+  width: calc(50% - 10px);
+}
+
+@media (max-width: 767px) {
+  .tickets .box {
+    width: 100%;
+  }
 }

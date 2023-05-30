@@ -39,6 +39,10 @@
   justify-content: space-between;
 }
 
+.f-wrap {
+  flex-wrap: wrap;
+}
+
 .block {
   display: block;
 }
@@ -198,6 +202,10 @@
   color: var(--main-green);
 }
 
+.c-red {
+  color: red;
+}
+
 .c-white {
   color: white;
 }
@@ -228,6 +236,9 @@
   font-size: 18px;
 }
 
+.fs-25 {
+  font-size: 25px;
+}
 .fw-bold {
   font-weight: bold;
 }
