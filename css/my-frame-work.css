@@ -1,9 +1,26 @@
+:root {
+  --open-sans: 'Open Sans', sans-serif;
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
+  --main-transition: 0.3s;
+  --main-blue: #0075ff;
+  --secondary-blue: #0d69d5;
+  --main-orange: #f59e0b;
+  --main-green:#22c55e;
+  --main-red: #f44336;
+  --main-grey: #888;
+}
+
 .d-flex {
   display: flex;
 }
 
 .justify-c {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .align-c {
@@ -22,6 +39,32 @@
   justify-content: space-between;
 }
 
+.block {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .block-mobile {
+    display: block;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+}
+
+.d-grid {
+  display: grid;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
 .p-10 {
   padding: 10px;
 }
@@ -34,6 +77,15 @@
   padding: 15px;
 }
 
+.p-20 {
+  padding: 20px;
+}
+
+
+.m-0 {
+  margin: 0;
+}
+
 .m-20 {
   margin: 20px;
 }
@@ -42,12 +94,52 @@
   margin-top: 0;
 }
 
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.m-10-center {
+  margin: 10px auto 10px;
+}
+
 .w-full {
   width: 100%;
 }
 
+.w-fit {
+  width: fit-content;
+}
+
 .grey-border {
-  border: 1px solid #ccc;
+  border: 1px solid var(--main-grey);
+}
+
+.b-none {
+  border: none;
+}
+
+.rad-6 {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 .rad-10 {
@@ -70,11 +162,45 @@
   background-color: white;
 }
 
+.bg-eee {
+  background-color: #eee;
+}
+
+.bg-blue {
+  background-color: var(--main-blue);
+}
+
+.bg-orange {
+  background-color: var(--main-orange);
+}
+
+.bg-green {
+  background-color: var(--main-green);
+}
+
 .c-black {
   color: black;
 }
 
+.c-grey {
+  color: var(--main-grey);
+}
 
+.c-blue {
+  color: var(--main-blue);
+}
+
+.c-orange {
+  color: var(--main-orange);
+}
+
+.c-green {
+  color: var(--main-green);
+}
+
+.c-white {
+  color: white;
+}
 
 .p-relative {
   position: relative;
@@ -84,11 +210,33 @@
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .txt-c-mobile {
+    text-align: center;
+  }
+}
+
 .fs-14 {
   font-size: 14px;
+}
+
+.fs-15 {
+  font-size: 15px;
 }
 
 .fs-18 {
   font-size: 18px;
 }
 
+.fw-bold {
+  font-weight: bold;
+}
+
+.btn-shape {
+  padding: 4px 10px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}

@@ -10,6 +10,7 @@
   --main-blue: #0075ff;
   --secondary-blue: #0d69d5;
   --main-orange: #f59e0b;
+  --main-green:#22c55e;
   --main-red: #f44336;
   --main-grey: #888;
 }
@@ -28,6 +29,22 @@ a {
 ul {
   padding: 0;
   list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-blue);
 }
 
 .page {
@@ -185,4 +202,199 @@ ul {
   width: 32px;
   height: 32px;
   margin-left: 15px;
+}
+
+.page h1 {
+  margin: 20px 20px 40px;
+}
+
+.page h1::before,
+.page h1::after {
+  content: "";
+  height: 5px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.page h1::before {
+  background-color: white;
+  width: 140px;
+}
+
+.page h1::after {
+  background-color: black;
+  width: 40px;
+}
+
+.wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width:767px) {
+  .wrapper {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+
+.welcome {
+  overflow: hidden;
+}
+
+@media (max-width:767px) {
+  .welcome .intro {
+    padding-bottom: 30px;
+  }
+
+  .welcome .avatar {
+    margin-left: 0;
+  }
+
+  .welcome .body>div:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.welcome .intro img {
+  width: 250px;
+
+}
+
+.welcome .avatar {
+  width: 64px;
+  height: 64px;
+  border: 2px solid white;
+  margin-left: 20px;
+  margin-top: -32px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 0 5px #ddd;
+}
+
+.welcome .body {
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+
+.welcome .body>div {
+  flex: 1;
+  margin-top: 10px;
+}
+
+.welcome .visit {
+  margin: 0 15px 15px auto;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.welcome .visit:hover {
+  background-color: var(--secondary-blue);
+}
+
+.quick-draft textarea {
+  resize: none;
+  min-height: 180px;
+}
+
+.quick-draft .save {
+  margin-left: auto;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  cursor: pointer;
+}
+
+.quick-draft .save:hover {
+  background-color: var(--secondary-blue);
+}
+
+.targets .targets-row .icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.blue .icon,
+.blue .progress {
+  background-color: rgba(0, 119, 255, 0.25);
+}
+
+.orange .icon,
+.orange .progress {
+  background-color:rgba(245, 159, 11, 0.25);
+}
+
+.green .icon,
+.green .progress {
+  background-color:rgba(34, 197, 94, 0.25);
+}
+
+
+
+.targets .details {
+  flex: 1;
+}
+
+.targets .progress {
+  height: 6px;
+}
+
+.targets .progress>span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.targets .progress>span>span {
+  position: absolute;
+  bottom: 16px;
+  right: -18px;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  font-size: 14px;
+}
+
+.targets .progress>span>span::after {
+  content: "";
+  border-color: transparent;
+  border-width: 5px;
+  border-style: solid;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.targets .progress>.blue span::after {
+  border-top-color: var(--main-blue);
+}
+.targets .progress>.orange span::after {
+  border-top-color: var(--main-orange);
+}
+.targets .progress>.green span::after {
+  border-top-color: var(--main-green);
 }
